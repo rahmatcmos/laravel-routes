@@ -23,10 +23,16 @@ Route::get('/', function () {
 //     return 'Anda mengirim pesan "' . $_POST['pesan'] . '"';
 // });
 
-Route::match(['get', 'post'], 'kontak', function() {
+// Route::match(['get', 'post'], 'kontak', function() {
+//     $html = '<h1>halaman kontak</h1>';
+//     if (isset($_REQUEST['pesan'])) {
+//     $html .= 'Anda mengirim pesan ' . $_REQUEST['pesan'];
+//     }
+//     return $html;
+// });
+
+Route::any('kontak', function() {
     $html = '<h1>halaman kontak</h1>';
-    if (isset($_REQUEST['pesan'])) {
-    $html .= 'Anda mengirim pesan ' . $_REQUEST['pesan'];
-    }
+    $html = 'Anda mengakses dengan method ' . Request::method();
     return $html;
 });
