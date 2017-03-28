@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('kontak', function () {
     return '<h1>Halaman Kontak</h1>';
 });
+
+Route::post('kontak-post', function() {
+    return 'Anda mengirim pesan "' . $_POST['pesan'] . '"';
+});
