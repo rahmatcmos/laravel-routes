@@ -37,17 +37,19 @@ Route::get('/', function () {
 //     return $html;
 // });
 
+/*
 Route::get('welcome', function() {
     return "Selamat datang " . $_REQUEST['nama'] . ". Anda ganteng banget!";
 });
+*/
 
 Route::get('welcome/{nama}/{asal}', function($nama, $asal) {
     return "Selamat datang " . $nama . " dari " . $asal . ". Anda ganteng banget!";
 });
 
-Route::get('welcome/{nama}', ['as'=>'home.welcome', function($nama) {
-    return "Selamat datang " . $nama . ". Anda ganteng banget!";
-}])->where('nama', '[A-Za-z]+');
+// Route::get('welcome/{nama}', ['as'=>'home.welcome', function($nama) {
+//     return "Selamat datang " . $nama . ". Anda ganteng banget!";
+// }])->where('nama', '[A-Za-z]+');
 
 
 /* Global Pattern Route
@@ -55,4 +57,11 @@ Route::pattern('nama', '[A-Za-z]+');
 
 Route::get('welcome/{nama}', ['as'=>'home.welcome', function($nama) {
     return "Selamat datang " . $nama . ". Anda ganteng banget!";
-}]); */
+}]);
+*/
+
+/* Optional Route tanpa Parameter
+Route::get('welcome/{nama?}', function($nama = 'Pengunjung') {
+    return "Selamat datang " . $nama . ". Anda ganteng banget!";
+});
+*/
