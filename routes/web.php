@@ -83,3 +83,17 @@ Route::get('menu', function() {
     return 'Kunjungi <a href="'.route('home.welcome').'">Halaman Welcome</a>';
 });
 */
+
+/* Route group
+Route::group(['prefix'=>'dashboard'], function() {
+    Route::get('settings', function() {
+      return 'halaman dashboard > settings';
+    });
+    Route::get('profile', function() {
+      return 'halaman dashboard > profile';
+    });
+    Route::get('inbox', function() {
+      return 'halaman dashboard > inbox';
+    });
+});
+*/
