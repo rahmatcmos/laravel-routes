@@ -44,3 +44,7 @@ Route::get('welcome', function() {
 Route::get('welcome/{nama}/{asal}', function($nama, $asal) {
     return "Selamat datang " . $nama . " dari " . $asal . ". Anda ganteng banget!";
 });
+
+Route::get('welcome/{nama}', ['as'=>'home.welcome', function($nama) {
+    return "Selamat datang " . $nama . ". Anda ganteng banget!";
+}])->where('nama', '[A-Za-z]+');
