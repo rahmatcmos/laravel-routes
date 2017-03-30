@@ -31,8 +31,12 @@ Route::get('/', function () {
 //     return $html;
 // });
 
-Route::any('kontak', function() {
-    $html = '<h1>halaman kontak</h1>';
-    $html = 'Anda mengakses dengan method ' . Request::method();
-    return $html;
+// Route::any('kontak', function() {
+//     $html = '<h1>halaman kontak</h1>';
+//     $html = 'Anda mengakses dengan method ' . Request::method();
+//     return $html;
+// });
+
+Route::get('welcome', function() {
+    return "Selamat datang " . $_REQUEST['nama'] . ". Anda ganteng banget!";
 });
