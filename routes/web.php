@@ -65,3 +65,9 @@ Route::get('welcome/{nama?}', function($nama = 'Pengunjung') {
     return "Selamat datang " . $nama . ". Anda ganteng banget!";
 });
 */
+
+/* Optional Route tanpa Parameter + Named Routes
+Route::get('welcome/{nama?}', ['as'=>'home.welcome',  function($nama = 'Pengunjung') {
+    return "Selamat datang " . $nama . ". Anda ganteng banget!";
+}]);
+*/
