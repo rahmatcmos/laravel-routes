@@ -40,3 +40,7 @@ Route::get('/', function () {
 Route::get('welcome', function() {
     return "Selamat datang " . $_REQUEST['nama'] . ". Anda ganteng banget!";
 });
+
+Route::get('welcome/{nama}/{asal}', function($nama, $asal) {
+    return "Selamat datang " . $nama . " dari " . $asal . ". Anda ganteng banget!";
+});
