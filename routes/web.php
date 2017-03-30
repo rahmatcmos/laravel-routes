@@ -48,3 +48,11 @@ Route::get('welcome/{nama}/{asal}', function($nama, $asal) {
 Route::get('welcome/{nama}', ['as'=>'home.welcome', function($nama) {
     return "Selamat datang " . $nama . ". Anda ganteng banget!";
 }])->where('nama', '[A-Za-z]+');
+
+
+/* Global Pattern Route
+Route::pattern('nama', '[A-Za-z]+');
+
+Route::get('welcome/{nama}', ['as'=>'home.welcome', function($nama) {
+    return "Selamat datang " . $nama . ". Anda ganteng banget!";
+}]); */
