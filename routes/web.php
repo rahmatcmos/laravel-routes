@@ -71,3 +71,15 @@ Route::get('welcome/{nama?}', ['as'=>'home.welcome',  function($nama = 'Pengunju
     return "Selamat datang " . $nama . ". Anda ganteng banget!";
 }]);
 */
+
+/* URL Manual
+Route::get('menu', function() {
+    return 'Kunjungi <a href="/welcome">Kunjungi Halaman Welcome</a>';
+});
+*/
+
+/* URL + named route
+Route::get('menu', function() {
+    return 'Kunjungi <a href="'.route('home.welcome').'">Halaman Welcome</a>';
+});
+*/
